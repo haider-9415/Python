@@ -1,0 +1,137 @@
+
+
+
+
+def insertFront(mydeque, element):
+    mydeque.insert(0, element)
+
+def insertRear(mydeque, element):
+    mydeque.append(element)
+
+def isEmpty(mydeque):
+    if mydeque == []: return True
+    else: return False
+
+def deletionFront(mydeque):
+    if isEmpty(mydeque): return "empty"
+    else: return mydeque.pop(0)
+
+def deletionRear(mydeque):
+    if isEmpty(mydeque): return "empty"
+    else: return mydeque.pop()
+
+def getFront(mydeque):
+    if isEmpty(mydeque): return "empty"
+    else: return mydeque[0]
+
+def getRear(mydeque):
+    if isEmpty(mydeque): return "empty"
+    else: return mydeque[len(mydeque) - 1]
+
+def displayFront(mydeque):
+    print("\n................................................\n")
+    if mydeque == []: print("deque is empty")
+    elif len(mydeque) == 1: print(mydeque[0]," <-- Front and Rear");print("\n................................................\n")
+    else:
+        print(myDeque[0]," <-- Front")
+        for  i in range(1,len(mydeque)-1):
+            print(mydeque[i])
+        print(mydeque[len(mydeque)-1],"  <-- Rear")
+        print("\n................................................\n")
+
+def displayRear(mydeque):
+    print("\n................................................\n")
+    if mydeque == []: print("deque is empty")
+    elif len(mydeque) == 1: print(mydeque[0]," <-- Front and Rear");print("\n................................................\n")
+    else:
+        print(mydeque[len(mydeque)-1],"  <-- Rear")
+        for  i in range(len(mydeque)-2,0,-1):
+            print(mydeque[i])
+        print(myDeque[0]," <-- Front")
+        print("\n................................................\n")
+
+
+
+myDeque = []
+front = rear = None
+
+
+
+while True:
+    print("1.insertFront ")
+    print("2.insertRear ")
+    print("3.deletionFront ")
+    print("4.deletionRear ")
+    print("5.getFront ")
+    print("6.getRear ")
+    print("7.displayFront ")
+    print("8.displayRear ")
+    print("0.exit ")
+
+    input_val = int(input("enter the value for operation: "))
+
+    if input_val == 1:
+        value_to_insert = input("\nenter the value to insert: ")
+        insertFront(myDeque,value_to_insert)
+
+    elif input_val == 2:
+        value_to_insert = input("\nenter the value to insert: ")
+        insertRear(myDeque,value_to_insert)
+
+    elif input_val == 3:
+        value = deletionFront(myDeque)
+        if value == "empty":
+            print("\n................................................\n")
+            print("Deque is empty\n")
+            print("\n................................................\n")
+        else:
+            print("\n................................................\n")
+            print("removed element at front: ",value)
+            print("\n................................................\n")
+
+    elif input_val == 4:
+        value = deletionRear(myDeque)
+        if value == "empty":
+            print("\n................................................\n")
+            print("Deque is empty\n")
+            print("\n................................................\n")
+        else:
+            print("\n................................................\n")
+            print("removed element at rear: ",value)
+            print("\n................................................\n")
+
+    elif input_val == 5:
+        front_ele = getFront(myDeque)
+        if front_ele == "empty":
+            print("\n................................................\n")
+            print("Deque is empty\n")
+            print("\n................................................\n")
+        else:
+            print("\n................................................\n")
+            print("element at front: ",front_ele)
+            print("\n................................................\n")
+
+    elif input_val == 6:
+        rear_ele = getRear(myDeque)
+        if rear_ele == "empty":
+            print("\n................................................\n")
+            print("Deque is empty\n")
+            print("\n................................................\n")
+        else:
+            print("\n................................................\n")
+            print("element at rear: ",rear_ele)
+            print("\n................................................\n")
+
+    elif input_val == 7:
+        displayFront(myDeque)
+
+    elif input_val == 8:
+        displayRear(myDeque)
+
+    elif input_val == 0:
+        break
+
+    else:
+        print("\n................................................\n")
+        print("invalid input\n")
+        print("\n................................................\n")
