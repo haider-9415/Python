@@ -1,7 +1,0 @@
-abcd is a file named "_file_l"
-this is second line
-my name is  hanzala
-i am a class 12th student
-using read()
-using readline()
-using readlines()
