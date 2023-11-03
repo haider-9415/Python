@@ -1,3 +1,4 @@
+# first remove '01-' from '01-uer_difined'
 from user_difined import*
 
 """ print cost to make a tent """
