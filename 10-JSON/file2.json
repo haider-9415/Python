@@ -1,0 +1,12 @@
+{
+    "Age":23,
+    "City":"pune",
+    "Ismarried":false,
+    "Name":"Haider",
+    "Number":1234567890,
+    "Subject":[
+        "Data Structures",
+        "Computer Graphics",
+        "Web Development"
+    ]
+}

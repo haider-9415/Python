@@ -1,0 +1,2 @@
+this file has been created to understand working of 
+nested exception handling
